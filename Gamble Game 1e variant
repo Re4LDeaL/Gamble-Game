@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        int geld = 500;
+        int kansen = 10;
+
+
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Gamble game");
+
+
+        while (geld > 0)
+        {
+            System.out.println("Jouw geld is:" + geld);
+            System.out.println("Speel of niet");
+            String antwoord = sc.nextLine();
+
+            if(antwoord.equalsIgnoreCase("Speel")){
+                long random = -100 + Math.round(Math.random() *200);
+                geld += random;
+            }
+
+        }
+
+    }
+}
